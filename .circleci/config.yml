@@ -10,3 +10,8 @@ jobs:
       - run:
           name: Elixir イメージのビルド
           command: docker build -t circleci/elixir:example .
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build_elixir
